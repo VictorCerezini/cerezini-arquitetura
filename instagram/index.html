@@ -28,7 +28,7 @@
     <section class="wrap intro">
       <p class="eyebrow">Proposta · Novembro 2026</p>
       <h1>O Instagram da <em>Cerezini Arquitetura</em>.</h1>
-      <p class="intro-lead">Um perfil com a mesma identidade do site: tons terrosos, tipografia serifada e os projetos em primeiro plano. Ao lado está a prévia de como o perfil fica depois dos 12 primeiros posts. Toque em qualquer post para ver as imagens e a legenda.</p>
+      <p class="intro-lead">Um perfil feito de imagens: cada post é uma foto ou imagem 3D de um projeto, com uma explicação curta na legenda. Os textos maiores ficam no site. Ao lado está a prévia de como o perfil fica depois dos 12 primeiros posts. Toque em qualquer post para ver a imagem e a legenda.</p>
     </section>
 
     <section class="wrap stage">
@@ -139,7 +139,7 @@
           <span class="block-num">04</span>
           <div>
             <h2>Destaques</h2>
-            <p>Seis destaques fixos no perfil, com capas terracota no estilo dos ícones do site.</p>
+            <p>Quatro destaques, com capas feitas das próprias fotos: um para cada projeto e um sobre o escritório.</p>
             <ul class="hl-list" id="hl-list"></ul>
           </div>
         </article>
@@ -147,10 +147,14 @@
         <article class="block">
           <span class="block-num">05</span>
           <div>
-            <h2>Linha editorial</h2>
-            <p>Quatro tipos de conteúdo, para o perfil não virar só portfólio nem só dica.</p>
-            <ul class="pillars" id="pillars"></ul>
-            <p class="rhythm"><strong>Ritmo sugerido:</strong> 2 a 3 posts por semana, stories pelo menos 3 vezes por semana e 1 Reels por semana quando houver vídeo (tour pelas imagens 3D, visita de obra, antes e depois de reforma).</p>
+            <h2>Formato dos posts</h2>
+            <p>O Instagram mostra os projetos. O que é texto (serviços, abordagem, quem é o arquiteto) fica no site, pelo link da bio.</p>
+            <ul class="steps">
+              <li>Uma imagem por post, sem texto em cima da foto.</li>
+              <li>Legenda curta: o projeto, onde fica e uma ou duas frases sobre o que a imagem mostra.</li>
+              <li>Os projetos se alternam (Boiçucanga, Térrea e Nova Cintra), e na grade cada coluna fica com um projeto.</li>
+              <li>Ritmo sugerido: 2 a 3 posts por semana. Bastidores e visitas de obra ficam nos stories.</li>
+            </ul>
           </div>
         </article>
 
@@ -160,9 +164,9 @@
             <h2>Como publicar</h2>
             <ul class="steps">
               <li>Publicar os 12 posts na ordem, do 1 ao 12, antes de divulgar o perfil. Assim a grade fica igual à prévia.</li>
-              <li>As imagens estão no formato 1080 × 1350 (4:5). O texto fica dentro da área que aparece na grade.</li>
+              <li>Oito imagens são verticais (1080 × 1350). As quatro panorâmicas (vista, varanda, integração e elevação) são horizontais (1080 × 566), para a foto não ser cortada.</li>
               <li>Cada legenda já vem com 5 hashtags, dentro do limite atual do Instagram.</li>
-              <li>Nos projetos em 3D (Nova Cintra e Térrea), a legenda avisa que são imagens do projeto.</li>
+              <li>Nos projetos em 3D (Nova Cintra e Térrea), a legenda avisa que é imagem do projeto.</li>
             </ul>
           </div>
         </article>
@@ -175,6 +179,7 @@
               <li>Escolher o nome de usuário e criar a conta como conta profissional.</li>
               <li>Aprovar as legendas e as imagens.</li>
               <li>Enviar as fotos originais em resolução maior e, se possível, um retrato mais recente.</li>
+              <li>Ir juntando fotos de obras e projetos novos. As imagens de hoje rendem os 12 primeiros posts, e o perfil vai precisar de material novo para manter o ritmo.</li>
               <li>Confirmar onde fica a Residência Térrea, para citar a cidade nas legendas.</li>
             </ul>
           </div>
@@ -188,7 +193,7 @@
         <header class="posts-head">
           <p class="eyebrow">Ordem de publicação</p>
           <h2>Os 12 primeiros posts</h2>
-          <p>Cada post com as imagens, a legenda pronta e as hashtags. O botão copia a legenda inteira para colar no Instagram. Também dá para <a href="kit/perfil-e-legendas.txt" download>baixar todas as legendas em um arquivo de texto</a>.</p>
+          <p>Cada post com a imagem, a legenda curta e as hashtags. O botão copia a legenda para colar no Instagram. Também dá para <a href="kit/perfil-e-legendas.txt" download>baixar todas as legendas em um arquivo de texto</a>.</p>
         </header>
         <ol class="post-list" id="post-list"></ol>
       </div>
@@ -210,10 +215,7 @@
     <div class="viewer-backdrop" data-close></div>
     <div class="viewer-box" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
       <div class="viewer-media">
-        <div class="viewer-track" id="viewer-track"></div>
-        <button type="button" class="viewer-arrow prev" id="viewer-prev" aria-label="Imagem anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
-        <button type="button" class="viewer-arrow next" id="viewer-next" aria-label="Próxima imagem"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
-        <div class="viewer-dots" id="viewer-dots"></div>
+        <img id="viewer-img" alt="">
       </div>
       <div class="viewer-side">
         <div class="viewer-user">

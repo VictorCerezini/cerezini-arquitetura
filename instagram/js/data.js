@@ -1,4 +1,5 @@
 /* Conteúdo da proposta de Instagram: perfil, destaques e os 12 primeiros posts.
+   Cada post é uma imagem de projeto com uma legenda curta.
    Os posts estão na ordem de publicação (1 = primeiro a ser publicado). */
 window.IG = {
   profile: {
@@ -19,93 +20,84 @@ window.IG = {
   },
 
   highlights: [
-    { id: 'projetos', label: 'Projetos', text: 'Fotos e vídeos curtos de cada projeto: Nova Cintra, Térrea e Boiçucanga.' },
-    { id: 'servicos', label: 'Serviços', text: 'O que o escritório faz. Dá para reaproveitar os slides do post 11.' },
-    { id: 'laudos', label: 'Laudos', text: 'Vistoria, acessibilidade e AVCB, com as dúvidas mais comuns.' },
-    { id: 'obras', label: 'Obras', text: 'Acompanhamento e bastidores de obra, visitas técnicas.' },
-    { id: 'sobre', label: 'Sobre', text: 'Quem é o arquiteto, formação e registro no CAU.' },
-    { id: 'contato', label: 'Contato', text: 'WhatsApp, e-mail e região de atendimento.' }
-  ],
-
-  pillars: [
-    { name: 'Projetos', share: 40, text: 'Carrosséis e fotos de cada projeto, um ângulo por post: fachada, lazer, detalhes, planta.' },
-    { name: 'Abordagem e dicas', share: 25, text: 'Luz, ventilação, integração e planejamento. É o conteúdo que as pessoas salvam e compartilham.' },
-    { name: 'Serviços e laudos', share: 20, text: 'Laudos, AVCB, regularização e gestão de obra explicados de forma simples.' },
-    { name: 'Bastidores e o arquiteto', share: 15, text: 'Pranchas, visitas de obra, rotina do escritório. Aproxima o cliente de quem assina o projeto.' }
+    { id: 'nova-cintra', label: 'Nova Cintra', text: 'Mais imagens e vídeos curtos da Residência Sustentável.' },
+    { id: 'terrea', label: 'Térrea', text: 'Mais imagens da Residência Térrea Contemporânea.' },
+    { id: 'boicucanga', label: 'Boiçucanga', text: 'Mais fotos da casa em São Sebastião.' },
+    { id: 'sobre', label: 'Sobre', text: 'Quem é o arquiteto, os serviços e como pedir um orçamento.' }
   ],
 
   posts: [
     {
-      n: 1, title: 'Apresentação', pillar: 'Bastidores e o arquiteto', slides: 3,
-      alt: 'Logotipo Cerezini Arquitetura sobre fundo terracota, com a frase Projetos, Laudos e Obras',
-      caption: 'Prazer, Cerezini Arquitetura.\n\nSomos um escritório de arquitetura e urbanismo em Santos/SP, conduzido pelo arquiteto Antônio Fernando Fadel Cerezini (CAU A7328-8).\n\nDesenvolvemos projetos residenciais e comerciais sob medida, unindo excelência técnica, qualidade estética e viabilidade construtiva. Também cuidamos de laudos técnicos, regularização e acompanhamento de obras.\n\nPor aqui você vai ver nossos projetos, a forma como pensamos cada espaço e os bastidores do trabalho.\n\n📍 Santos/SP e região\nOrçamentos pelo WhatsApp, no link da bio.',
-      tags: ['arquitetura', 'arquiteturaeurbanismo', 'arquitetosantos', 'santossp', 'baixadasantista']
+      n: 1, title: 'Boiçucanga · sacada', img: 'post-01.jpg', ratio: '4:5',
+      alt: 'Sacada em madeira apoiada em pilares, sobre a varanda térrea de uma casa terracota',
+      caption: 'Residência Boiçucanga · São Sebastião, SP\nPilares e vigas em madeira maçaranduba ficam aparentes e sustentam a sacada sobre a varanda térrea.',
+      tags: ['arquitetura', 'casadepraia', 'litoralnorte', 'estruturademadeira', 'saosebastiao']
     },
     {
-      n: 2, title: 'Residência Boiçucanga', pillar: 'Projetos', slides: 2,
-      alt: 'Casa de fachada terracota com estrutura de madeira aparente e telhados inclinados, cercada pela Mata Atlântica',
-      caption: 'Residência Boiçucanga · São Sebastião, Litoral Norte de SP\n\nUma casa que assume a linguagem do lugar: vigas e pilares em madeira maçaranduba, alvenaria, coberturas inclinadas e beirais amplos que protegem as varandas.\n\nConcebida inicialmente como duas casas geminadas, foi reformulada em uma única residência, com estar e jantar amplos integrados à cozinha.\n\nDeslize para ver a varanda →',
-      tags: ['casadepraia', 'litoralnorte', 'saosebastiao', 'arquiteturaresidencial', 'madeira']
-    },
-    {
-      n: 3, title: 'O arquiteto', pillar: 'Bastidores e o arquiteto', slides: 2,
-      alt: 'Retrato em preto e branco do arquiteto Antônio Fernando Fadel Cerezini',
-      caption: 'Quem assina os projetos.\n\nAntônio Fernando Fadel Cerezini é arquiteto e urbanista (CAU A7328-8), com sólida experiência em projetos residenciais e comerciais.\n\nO trabalho parte de quatro cuidados essenciais: circulação, ventilação, funcionalidade e conforto. O foco está na excelência técnica, na qualidade estética e na viabilidade construtiva, para que cada projeto atenda às necessidades de quem vai viver ou trabalhar ali.',
-      tags: ['arquiteto', 'arquitetoeurbanista', 'arquitetosantos', 'santossp', 'arquitetura']
-    },
-    {
-      n: 4, title: 'Térrea: fachada', pillar: 'Projetos', slides: 2,
+      n: 2, title: 'Térrea · fachada', img: 'post-02.jpg', ratio: '4:5',
       alt: 'Fachada contemporânea com platibandas, revestimento em madeira e palmeiras',
-      caption: 'Residência Térrea Contemporânea\n\nPlatibandas altas escondem a cobertura e organizam a fachada em linhas horizontais e volumes puros. O revestimento em madeira aquece o conjunto e marca a entrada.\n\nUma linguagem limpa, que não depende de excessos para ter presença.\n\nImagens do projeto.',
-      tags: ['fachada', 'casaterrea', 'arquiteturacontemporanea', 'projetoresidencial', 'arquitetura']
+      caption: 'Residência Térrea Contemporânea\nPlatibandas altas escondem a cobertura e deixam a fachada em linhas horizontais. A madeira marca a entrada.\nImagem do projeto.',
+      tags: ['arquitetura', 'fachada', 'casaterrea', 'arquiteturacontemporanea', 'projetoresidencial']
     },
     {
-      n: 5, title: 'Cinco princípios', pillar: 'Abordagem e dicas', slides: 6,
-      alt: 'Título Cinco princípios que guiam cada projeto, sobre fundo escuro',
-      caption: 'Cinco princípios que guiam cada projeto do escritório:\n\n01 Integração: ambientes sociais conectados à cozinha, ao lazer e ao jardim.\n02 Luz natural: aberturas e orientação solar estudadas para iluminar e reduzir a luz artificial durante o dia.\n03 Ventilação e conforto: o conforto térmico como ponto de partida, e não como ajuste final.\n04 Linguagem limpa: proporção, materialidade e volumes puros.\n05 Viabilidade construtiva: soluções pensadas para sair do papel com qualidade e segurança.\n\nSalve este post para consultar quando for planejar a sua casa.',
-      tags: ['dicasdearquitetura', 'iluminacaonatural', 'ventilacaonatural', 'confortotermico', 'arquitetura']
+      n: 3, title: 'Nova Cintra · elevação', img: 'post-03.jpg', ratio: '1.91:1',
+      alt: 'Elevação colorida da residência com amplo fechamento em vidro',
+      caption: 'Residência Sustentável · Morro da Nova Cintra, Santos\nNa elevação, o amplo fechamento em vidro que leva luz natural e vista para dentro da casa.\nDesenho do projeto.',
+      tags: ['arquitetura', 'projetoarquitetonico', 'arquiteturasustentavel', 'santossp', 'arquitetosantos']
     },
     {
-      n: 6, title: 'Boiçucanga: área gourmet', pillar: 'Projetos', slides: 1,
+      n: 4, title: 'Boiçucanga · varanda', img: 'post-04.jpg', ratio: '1.91:1',
+      alt: 'Varanda coberta com pilares de madeira, iluminação quente e jardim tropical',
+      caption: 'Residência Boiçucanga\nBeirais amplos protegem a varanda, com pilares de madeira, luz quente e jardim tropical em volta.',
+      tags: ['varanda', 'casadepraia', 'litoralnorte', 'arquiteturaresidencial', 'arquitetura']
+    },
+    {
+      n: 5, title: 'Térrea · integração', img: 'post-05.jpg', ratio: '1.91:1',
+      alt: 'Sala, cozinha e jantar integrados, abertos para a piscina e o jardim',
+      caption: 'Residência Térrea Contemporânea\nSala, cozinha e jantar integrados, abertos para a piscina e o jardim. O pé-direito elevado amplia o espaço.\nImagem do projeto.',
+      tags: ['integracao', 'cozinhaintegrada', 'casaterrea', 'projetoresidencial', 'arquitetura']
+    },
+    {
+      n: 6, title: 'Nova Cintra · vista', img: 'post-06.jpg', ratio: '1.91:1',
+      alt: 'Residência com fachada curva de vidro ao entardecer, no alto de um morro com vista para Santos',
+      caption: 'Residência Sustentável · Morro da Nova Cintra, Santos\nNo alto do morro, a fachada curva de vidro se abre para a vista de Santos.\nImagem do projeto.',
+      tags: ['arquiteturasustentavel', 'casasustentavel', 'santossp', 'arquitetosantos', 'arquiteturacontemporanea']
+    },
+    {
+      n: 7, title: 'Boiçucanga · área gourmet', img: 'post-07.jpg', ratio: '4:5',
       alt: 'Área gourmet com churrasqueira de tijolos, forno de pizza e mesa de madeira',
-      caption: 'Área gourmet · Residência Boiçucanga\n\nChurrasqueira e forno de pizza em tijolos, mesa de madeira e iluminação quente: um espaço feito para receber, no ritmo do Litoral Norte.\n\nA área de lazer da casa reúne ainda piscina e casa do caseiro.',
+      caption: 'Área gourmet · Residência Boiçucanga\nChurrasqueira e forno de pizza em tijolos, mesa de madeira e luz quente para receber.',
       tags: ['areagourmet', 'espacogourmet', 'casadepraia', 'litoralnorte', 'arquitetura']
     },
     {
-      n: 7, title: 'Do papel à obra', pillar: 'Bastidores e o arquiteto', slides: 2,
-      alt: 'Prancha do projeto arquitetônico com plantas, cortes e elevações da Residência Boiçucanga',
-      caption: 'Do papel à obra.\n\nAntes do primeiro tijolo, cada casa passa por plantas, cortes e elevações. É nessa etapa que se resolvem a implantação no terreno, a circulação, a ventilação e a viabilidade construtiva, evitando surpresas durante a obra.\n\nNa imagem, a prancha do projeto da Residência Boiçucanga, em São Sebastião.',
-      tags: ['projetoarquitetonico', 'plantabaixa', 'desenhotecnico', 'arquitetura', 'obra']
-    },
-    {
-      n: 8, title: 'Térrea: lazer integrado', pillar: 'Projetos', slides: 2,
+      n: 8, title: 'Térrea · lazer', img: 'post-08.jpg', ratio: '4:5',
       alt: 'Área gourmet coberta conectada à piscina',
-      caption: 'Lazer integrado · Residência Térrea Contemporânea\n\nSala, cozinha e espaço gourmet formam um conjunto contínuo, aberto à piscina. A casa valoriza a vida cotidiana pela integração entre os ambientes sociais e a área de lazer.\n\nO pé-direito elevado na sala amplia o espaço, e as suítes foram implantadas para favorecer a incidência solar.\n\nImagens do projeto.',
-      tags: ['areadelazer', 'piscina', 'espacogourmet', 'casaterrea', 'projetoresidencial']
+      caption: 'Residência Térrea Contemporânea\nA área gourmet coberta se liga direto à piscina, e a casa toda se abre para o lazer.\nImagem do projeto.',
+      tags: ['areadelazer', 'piscina', 'espacogourmet', 'casaterrea', 'arquitetura']
     },
     {
-      n: 9, title: 'Boiçucanga: madeira', pillar: 'Projetos', slides: 1,
-      alt: 'Sacada em madeira apoiada em pilares, sobre a varanda térrea',
-      caption: 'Estrutura aparente em madeira maçaranduba.\n\nNa Residência Boiçucanga, pilares e vigas de madeira ficam à mostra: sustentam a sacada, desenham a fachada e conversam com a Mata Atlântica ao redor.',
-      tags: ['estruturademadeira', 'madeira', 'casadepraia', 'litoralnorte', 'arquiteturaresidencial']
+      n: 9, title: 'Nova Cintra · planta humanizada', img: 'post-09.jpg', ratio: '4:5',
+      alt: 'Perspectiva 3D humanizada do pavimento térreo, com jardim curvo e caminhos de pedra',
+      caption: 'Residência Sustentável · Nova Cintra, Santos\nA planta humanizada do térreo mostra o jardim curvo, os caminhos de pedra e os ambientes sociais.\nImagem do projeto.',
+      tags: ['plantahumanizada', 'projetoarquitetonico', 'paisagismo', 'santossp', 'arquitetura']
     },
     {
-      n: 10, title: 'Térrea: à noite', pillar: 'Projetos', slides: 1,
+      n: 10, title: 'Boiçucanga · fachada', img: 'post-10.jpg', ratio: '4:5',
+      alt: 'Casa de fachada terracota com estrutura de madeira aparente e telhados inclinados',
+      caption: 'Residência Boiçucanga · São Sebastião, Litoral Norte de SP\nFachada terracota, estrutura de madeira aparente e telhados inclinados, cercada pela Mata Atlântica.',
+      tags: ['casadepraia', 'litoralnorte', 'saosebastiao', 'boicucanga', 'arquiteturaresidencial']
+    },
+    {
+      n: 11, title: 'Térrea · à noite', img: 'post-11.jpg', ratio: '4:5',
       alt: 'Residência térrea iluminada à noite, com piscina e palmeiras',
-      caption: 'Quando a noite cai, a casa muda de personalidade.\n\nA iluminação valoriza os volumes, a piscina e o paisagismo, e transforma a área externa em uma extensão da sala.\n\nResidência Térrea Contemporânea · imagens do projeto.',
-      tags: ['iluminacao', 'paisagismo', 'arquiteturacontemporanea', 'casaterrea', 'piscina']
+      caption: 'Residência Térrea Contemporânea\nÀ noite, a iluminação destaca os volumes, a piscina e as palmeiras do jardim.\nImagem do projeto.',
+      tags: ['iluminacao', 'paisagismo', 'piscina', 'casaterrea', 'arquiteturacontemporanea']
     },
     {
-      n: 11, title: 'Serviços', pillar: 'Serviços e laudos', slides: 5,
-      alt: 'Título Do projeto à obra, com responsabilidade técnica, sobre fundo terracota',
-      caption: 'Do projeto à obra, com responsabilidade técnica. Conheça os serviços do escritório:\n\n• Projetos residenciais: residências novas, reformas de casas e apartamentos e móveis planejados.\n• Projetos comerciais: bares e restaurantes, salões de beleza, consultórios e centros médicos, oficinas mecânicas.\n• Laudos e regularização: vistoria, acessibilidade e assessoria para AVCB.\n• Gestão de obras: responsabilidade técnica (RRT), acompanhamento e fiscalização.\n\nAtendemos Santos e região. Fale com a gente pelo WhatsApp, no link da bio.',
-      tags: ['arquitetosantos', 'laudotecnico', 'avcb', 'reforma', 'projetocomercial']
-    },
-    {
-      n: 12, title: 'Residência Sustentável', pillar: 'Projetos', slides: 5,
-      alt: 'Fachada com grandes panos de vidro iluminados da Residência Sustentável, no Morro da Nova Cintra',
-      caption: 'Residência Sustentável · Morro da Nova Cintra, Santos/SP\n\nConcebida para valorizar a luz, as vistas e os recursos naturais do terreno. A fachada envidraçada e curva cria continuidade visual entre a sala de pé-direito duplo e o jardim.\n\nOs pavimentos acompanham a topografia: dormitórios e estar íntimo em cima, garagem e casa do caseiro no subsolo.\n\nSoluções do projeto: captação de água da chuva, energia solar, iluminação natural, eficiência energética, integração e ventilação.\n\nDeslize para ver a planta humanizada e a elevação →\nImagens do projeto.',
-      tags: ['arquiteturasustentavel', 'casasustentavel', 'santossp', 'arquitetosantos', 'energiasolar']
+      n: 12, title: 'Nova Cintra · fachada', img: 'post-12.jpg', ratio: '4:5',
+      alt: 'Fachada com grandes panos de vidro iluminados da Residência Sustentável',
+      caption: 'Residência Sustentável · Morro da Nova Cintra, Santos\nGrandes panos de vidro levam luz natural à sala de pé-direito duplo. O projeto prevê captação de água da chuva e energia solar.\nImagem do projeto.',
+      tags: ['arquiteturasustentavel', 'casasustentavel', 'energiasolar', 'santossp', 'arquitetosantos']
     }
   ]
 };
