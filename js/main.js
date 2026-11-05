@@ -1,4 +1,4 @@
-// Terra Firme — interações da landing page
+// Cerezini Arquitetura — interações da landing page
 (function () {
   // Cabeçalho muda de fundo ao rolar
   var header = document.querySelector('.site-header');
