@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram | Cerezini Arquitetura</title>
+  <meta name="description" content="Proposta de perfil no Instagram para a Cerezini Arquitetura: nome de usuário, bio, destaques e os 12 primeiros posts com legendas.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/instagram.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="../" class="brand" aria-label="Voltar ao site da Cerezini Arquitetura">
+        <span class="brand-name">Cerezini</span>
+        <span class="brand-sub">Arquitetura</span>
+      </a>
+      <p class="topbar-tag">Proposta de Instagram</p>
+      <a class="btn btn-dark btn-sm" href="kit/cerezini-instagram-kit.zip" download>Baixar kit<span class="btn-long">&nbsp;completo</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap intro">
+      <p class="eyebrow">Proposta · Novembro 2026</p>
+      <h1>O Instagram da <em>Cerezini Arquitetura</em>.</h1>
+      <p class="intro-lead">Um perfil com a mesma identidade do site: tons terrosos, tipografia serifada e os projetos em primeiro plano. Ao lado está a prévia de como o perfil fica depois dos 12 primeiros posts. Toque em qualquer post para ver as imagens e a legenda.</p>
+    </section>
+
+    <section class="wrap stage">
+      <!-- Celular com a prévia do perfil -->
+      <div class="phone-col">
+        <div class="phone" aria-label="Prévia do perfil no Instagram">
+          <div class="phone-screen">
+            <div class="ig" id="ig">
+              <div class="ig-status" aria-hidden="true">
+                <span>9:41</span>
+                <span class="ig-status-icons">
+                  <svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx=".6"/><rect x="5" y="5.5" width="3" height="6.5" rx=".6"/><rect x="10" y="3" width="3" height="9" rx=".6"/><rect x="15" y="0" width="3" height="12" rx=".6"/></svg>
+                  <svg viewBox="0 0 16 12"><path d="M8 11.5l2.2-2.6a3.3 3.3 0 0 0-4.4 0zM3.2 6.4l1.4 1.6a5.2 5.2 0 0 1 6.8 0l1.4-1.6a7.3 7.3 0 0 0-9.6 0zM.3 3.2l1.4 1.6a9.6 9.6 0 0 1 12.6 0l1.4-1.6a11.7 11.7 0 0 0-15.4 0z"/></svg>
+                  <svg viewBox="0 0 26 12"><rect x=".5" y=".5" width="22" height="11" rx="3" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="1.6"/><rect x="23.6" y="4" width="1.8" height="4" rx=".8" opacity=".45"/></svg>
+                </span>
+              </div>
+
+              <div class="ig-nav">
+                <svg class="ig-ico" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+                <strong class="ig-handle" data-bind="handle"></strong>
+                <span class="ig-nav-right">
+                  <svg class="ig-ico" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>
+                  <svg class="ig-ico" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></svg>
+                </span>
+              </div>
+
+              <div class="ig-head">
+                <img class="ig-avatar" data-bind-src="avatar" alt="Foto de perfil com o logotipo Cerezini Arquitetura" width="86" height="86">
+                <div class="ig-head-right">
+                  <strong class="ig-name" data-bind="name"></strong>
+                  <ul class="ig-stats">
+                    <li><b id="ig-count">12</b>publicações</li>
+                    <li><b>0</b>seguidores</li>
+                    <li><b>0</b>seguindo</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="ig-bio">
+                <p class="ig-cat" data-bind="category"></p>
+                <p class="ig-bio-text" data-bind="bio"></p>
+                <a class="ig-link" data-bind-href="linkUrl" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/></svg>
+                  <span data-bind="link"></span>
+                </a>
+              </div>
+
+              <div class="ig-actions">
+                <button type="button" class="ig-btn ig-btn-primary">Seguir</button>
+                <button type="button" class="ig-btn">Mensagem</button>
+                <a class="ig-btn" data-bind-href="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+
+              <ul class="ig-highlights" id="ig-highlights"></ul>
+
+              <div class="ig-tabs" aria-hidden="true">
+                <span class="on"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17"/><path d="M9.2 3.5v17M14.8 3.5v17M3.5 9.2h17M3.5 14.8h17"/></svg></span>
+                <span><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M3.5 8.5h17M9 3.5l2.5 5M14.5 3.5l2.5 5"/><path d="M10.5 11.5v5l4-2.5z"/></svg></span>
+                <span><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><circle cx="12" cy="10" r="2.8"/><path d="M7 18.5a5.5 5.5 0 0 1 10 0"/></svg></span>
+              </div>
+
+              <div class="ig-grid" id="ig-grid"></div>
+            </div>
+          </div>
+        </div>
+        <p class="phone-note">Role dentro do celular para ver a grade inteira.</p>
+      </div>
+
+      <!-- Proposta -->
+      <div class="plan">
+        <article class="block">
+          <span class="block-num">01</span>
+          <div>
+            <h2>Nome de usuário</h2>
+            <p>Sugestões em ordem de preferência. A disponibilidade só pode ser confirmada na hora de criar a conta.</p>
+            <ol class="handles" id="handles"></ol>
+          </div>
+        </article>
+
+        <article class="block">
+          <span class="block-num">02</span>
+          <div>
+            <h2>Nome, categoria e bio</h2>
+            <dl class="fields">
+              <div><dt>Nome</dt><dd data-bind="name"></dd></div>
+              <div><dt>Categoria</dt><dd data-bind="category"></dd></div>
+              <div><dt>Bio</dt><dd><span class="bio-pre" data-bind="bio"></span><small id="bio-count"></small></dd></div>
+              <div><dt>Link</dt><dd>O site, <span data-bind="link"></span></dd></div>
+              <div><dt>Botões</dt><dd>WhatsApp (13) 99760-5033 e e-mail</dd></div>
+            </dl>
+            <button type="button" class="link-btn" data-copy="bio">Copiar bio</button>
+          </div>
+        </article>
+
+        <article class="block">
+          <span class="block-num">03</span>
+          <div>
+            <h2>Foto de perfil</h2>
+            <p>O logotipo do site sobre o fundo creme. A versão com o monograma terracota é uma alternativa, mais legível em tamanho pequeno.</p>
+            <div class="avatars">
+              <figure><img src="perfil/perfil.png" alt="Foto de perfil com o logotipo Cerezini Arquitetura em fundo creme" width="120" height="120" loading="lazy"><figcaption>Logotipo · <a href="perfil/perfil.png" download>baixar</a></figcaption></figure>
+              <figure><img src="perfil/perfil-monograma.png" alt="Foto de perfil alternativa com a letra C em fundo terracota" width="120" height="120" loading="lazy"><figcaption>Monograma · <a href="perfil/perfil-monograma.png" download>baixar</a></figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="block">
+          <span class="block-num">04</span>
+          <div>
+            <h2>Destaques</h2>
+            <p>Seis destaques fixos no perfil, com capas terracota no estilo dos ícones do site.</p>
+            <ul class="hl-list" id="hl-list"></ul>
+          </div>
+        </article>
+
+        <article class="block">
+          <span class="block-num">05</span>
+          <div>
+            <h2>Linha editorial</h2>
+            <p>Quatro tipos de conteúdo, para o perfil não virar só portfólio nem só dica.</p>
+            <ul class="pillars" id="pillars"></ul>
+            <p class="rhythm"><strong>Ritmo sugerido:</strong> 2 a 3 posts por semana, stories pelo menos 3 vezes por semana e 1 Reels por semana quando houver vídeo (tour pelas imagens 3D, visita de obra, antes e depois de reforma).</p>
+          </div>
+        </article>
+
+        <article class="block">
+          <span class="block-num">06</span>
+          <div>
+            <h2>Como publicar</h2>
+            <ul class="steps">
+              <li>Publicar os 12 posts na ordem, do 1 ao 12, antes de divulgar o perfil. Assim a grade fica igual à prévia.</li>
+              <li>As imagens estão no formato 1080 × 1350 (4:5). O texto fica dentro da área que aparece na grade.</li>
+              <li>Cada legenda já vem com 5 hashtags, dentro do limite atual do Instagram.</li>
+              <li>Nos projetos em 3D (Nova Cintra e Térrea), a legenda avisa que são imagens do projeto.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="block">
+          <span class="block-num">07</span>
+          <div>
+            <h2>O que falta do cliente</h2>
+            <ul class="steps">
+              <li>Escolher o nome de usuário e criar a conta como conta profissional.</li>
+              <li>Aprovar as legendas e as imagens.</li>
+              <li>Enviar as fotos originais em resolução maior e, se possível, um retrato mais recente.</li>
+              <li>Confirmar onde fica a Residência Térrea, para citar a cidade nas legendas.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Posts com legendas -->
+    <section class="posts-section">
+      <div class="wrap">
+        <header class="posts-head">
+          <p class="eyebrow">Ordem de publicação</p>
+          <h2>Os 12 primeiros posts</h2>
+          <p>Cada post com as imagens, a legenda pronta e as hashtags. O botão copia a legenda inteira para colar no Instagram. Também dá para <a href="kit/perfil-e-legendas.txt" download>baixar todas as legendas em um arquivo de texto</a>.</p>
+        </header>
+        <ol class="post-list" id="post-list"></ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <a href="../" class="brand brand-light" aria-label="Cerezini Arquitetura">
+        <span class="brand-name">Cerezini</span>
+        <span class="brand-sub">Arquitetura</span>
+      </a>
+      <p><a href="../">Ver o site</a> · <a href="kit/cerezini-instagram-kit.zip" download>Baixar kit completo (.zip)</a></p>
+    </div>
+  </footer>
+
+  <!-- Visualizador de post -->
+  <div class="viewer" id="viewer" hidden>
+    <div class="viewer-backdrop" data-close></div>
+    <div class="viewer-box" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+      <div class="viewer-media">
+        <div class="viewer-track" id="viewer-track"></div>
+        <button type="button" class="viewer-arrow prev" id="viewer-prev" aria-label="Imagem anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="viewer-arrow next" id="viewer-next" aria-label="Próxima imagem"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="viewer-dots" id="viewer-dots"></div>
+      </div>
+      <div class="viewer-side">
+        <div class="viewer-user">
+          <img data-bind-src="avatar" alt="" width="32" height="32">
+          <strong data-bind="handle"></strong>
+          <span class="viewer-num" id="viewer-num"></span>
+        </div>
+        <h3 class="sr-only" id="viewer-title"></h3>
+        <div class="viewer-caption" id="viewer-caption"></div>
+        <div class="viewer-tools">
+          <button type="button" class="link-btn" id="viewer-copy">Copiar legenda</button>
+        </div>
+      </div>
+      <button type="button" class="viewer-close" data-close aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/instagram.js"></script>
+</body>
+</html>
