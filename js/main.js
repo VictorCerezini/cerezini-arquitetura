@@ -8,6 +8,28 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  // Menu do celular
+  var toggle = document.querySelector('.menu-toggle');
+  function setMenu(open) {
+    document.body.classList.toggle('menu-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  }
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      setMenu(!document.body.classList.contains('menu-open'));
+    });
+    document.querySelectorAll('.mobile-nav a').forEach(function (a) {
+      a.addEventListener('click', function () { setMenu(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setMenu(false);
+    });
+    window.matchMedia('(min-width: 901px)').addEventListener('change', function (e) {
+      if (e.matches) setMenu(false);
+    });
+  }
+
   // Animações de entrada
   var items = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {

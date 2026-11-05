@@ -205,6 +205,34 @@ h1 em, h2 em, .lead em { font-style: italic; color: var(--terra); }
 .main-nav a:hover { color: var(--terra); }
 .main-nav a:hover::after { transform: scaleX(1); }
 
+/* ---------- Menu mobile ---------- */
+
+.menu-toggle {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.menu-toggle span {
+  position: absolute;
+  left: 11px;
+  right: 11px;
+  height: 1.5px;
+  background: var(--ink);
+  transition: transform .35s var(--ease), top .35s var(--ease);
+}
+.menu-toggle span:first-child { top: 17px; }
+.menu-toggle span:last-child  { top: 26px; }
+.menu-open .menu-toggle span:first-child { top: 21.5px; transform: rotate(45deg); }
+.menu-open .menu-toggle span:last-child  { top: 21.5px; transform: rotate(-45deg); }
+
+.mobile-nav { display: none; }
+
 /* ---------- Hero ---------- */
 
 .hero { padding-top: calc(var(--header-h) + 76px); }
@@ -276,7 +304,7 @@ h1 em, h2 em, .lead em { font-style: italic; color: var(--terra); }
   border-left: 1px solid var(--line);
   line-height: 1;
 }
-.triad li:first-child { border-left: 0; }
+.triad li:first-child { border-left: 0; padding-left: 0; }
 .triad li:last-child { padding-right: 0; }
 
 /* ---------- Intro ---------- */
@@ -810,7 +838,7 @@ h1 em, h2 em, .lead em { font-style: italic; color: var(--terra); }
 }
 
 /* =========================================================
-   Responsivo (base — refinamento mobile na próxima etapa)
+   Responsivo
    ========================================================= */
 
 @media (max-width: 1180px) {
@@ -820,11 +848,49 @@ h1 em, h2 em, .lead em { font-style: italic; color: var(--terra); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ---------- Tablet e celular ---------- */
 @media (max-width: 900px) {
   :root { --gutter: 24px; --header-h: 72px; }
   .section { padding: 96px 0; }
-  .main-nav { display: none; }
 
+  /* Menu */
+  .main-nav { display: none; }
+  .header-inner { gap: 16px; }
+  .header-cta { margin-left: auto; }
+  .menu-toggle { display: block; }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: var(--header-h) 0 0 0;
+    z-index: 45;
+    padding: 24px var(--gutter) 48px;
+    background: var(--paper);
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .3s var(--ease), transform .3s var(--ease), visibility .3s;
+  }
+  .mobile-nav a:not(.btn) {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--serif);
+    font-size: 34px;
+    line-height: 1.15;
+    color: var(--ink);
+  }
+  .mobile-nav .btn { align-self: flex-start; margin-top: 32px; }
+  .menu-open { overflow: hidden; }
+  .menu-open .mobile-nav { opacity: 1; visibility: visible; transform: none; }
+  .menu-open .site-header {
+    background: var(--paper);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: 0 1px 0 var(--line);
+  }
+
+  /* Grades em uma coluna */
   .hero-grid,
   .intro-grid,
   .section-head,
@@ -848,10 +914,16 @@ h1 em, h2 em, .lead em { font-style: italic; color: var(--terra); }
   .contact-grid > *,
   .mosaic { grid-column: 1 / -1 !important; }
 
+  /* Hero */
+  .hero-media { margin-top: 48px; }
+  .hero-media img { object-position: 42% 55%; }
+  .hero-meta { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  /* Conteúdo */
   .intro-body { grid-column: 1 / -1; }
   .intro-cols { grid-template-columns: 1fr; gap: 20px; }
-  .hero-meta { flex-direction: column; align-items: flex-start; }
-  .project-head { grid-template-columns: 1fr; }
+  .project { margin-top: 96px; }
+  .project-head { grid-template-columns: 1fr; gap: 16px; }
   .project-num { font-size: 56px; }
   .project-a-grid .media-main,
   .media-hero-c { height: 380px; }
@@ -860,17 +932,67 @@ h1 em, h2 em, .lead em { font-style: italic; color: var(--terra); }
   .project-c-grid .project-text { padding: 16px 0 24px; }
   .project-c-grid .media { height: 260px; }
   .project-a-row .media img { height: auto; max-height: 360px; }
+  .approach-img { margin-top: 40px; }
   .about-visual { padding-bottom: 64px; }
-  .footer-grid { grid-template-columns: 1fr; }
+  .contact { padding: 96px 0; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid > div:first-child { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column; gap: 6px; }
 }
 
+/* ---------- Celular ---------- */
 @media (max-width: 600px) {
-  .header-inner .btn { display: none; }
+  body { font-size: 16px; }
+  .section { padding: 80px 0; }
+  .header-cta { display: none; }
+
+  /* Hero */
   .hero { padding-top: calc(var(--header-h) + 40px); }
-  .services-grid { grid-template-columns: 1fr; }
+  .eyebrow { flex-wrap: wrap; row-gap: 6px; font-size: 11px; letter-spacing: .18em; }
+  .eyebrow-sep { display: none; }
+  .eyebrow-city { flex-basis: 100%; padding-left: 46px; }
+  .hero-media { height: 280px; margin-top: 40px; }
+  .hero-media figcaption {
+    left: var(--gutter);
+    right: auto;
+    bottom: 14px;
+    max-width: calc(100% - 2 * var(--gutter));
+    padding: 8px 12px;
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+  .hero-meta p strong { display: block; margin: 0 0 2px; }
+
+  /* Títulos */
+  h2 { font-size: 36px; line-height: 1.08; }
+  h2 br { display: none; }
+  .lead { font-size: 27px; line-height: 1.25; }
+  .project-head h3 { font-size: 34px; }
+  .approach h2 { font-size: 32px; }
+  .about-text h2 { font-size: 36px; }
+  .contact h2 { font-size: 38px; }
+  .intro-cols { margin-top: 36px; }
+  .services-grid { margin-top: 48px; }
+
+  /* Projetos */
+  .project-a-grid { gap: 32px; }
+  .project-a-grid .media-main,
+  .media-hero-c { height: 300px; }
   .mosaic { grid-template-columns: 1fr; grid-template-rows: none; }
   .mosaic .media { height: 240px; }
   .tags { flex-wrap: wrap; }
+
+  /* Serviços, sobre e contato */
+  .services-grid { grid-template-columns: 1fr; }
+  .service { padding: 32px 26px 36px; }
+  .about-visual { padding-bottom: 56px; }
+  .about-drawing { width: 84%; padding: 14px; }
+  .about-drawing figcaption { display: none; }
+  .about-portrait { width: 50%; border-width: 6px; }
+  .contact-list a { word-break: break-word; }
   .contact-form { padding: 32px 24px; }
+  .footer-grid { grid-template-columns: 1fr; }
+
+  .wa-float { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+  .wa-float svg { width: 25px; height: 25px; }
 }
