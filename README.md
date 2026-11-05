@@ -6,4 +6,4 @@ Site estático: `index.html`, `css/styles.css`, `js/main.js` e as fotos em `img/
 
 ## Proposta de Instagram
 
-A pasta `instagram/` tem a prévia do perfil (publicada em `/instagram/`): nome de usuário, bio, destaques, linha editorial e os 12 primeiros posts com legendas. As imagens dos posts (1080 × 1350), as capas de destaques e a foto de perfil estão em `instagram/posts/`, `instagram/destaques/` e `instagram/perfil/`. O kit para baixar tudo de uma vez é `instagram/kit/cerezini-instagram-kit.zip`. Os textos ficam em `instagram/js/data.js`.
+A pasta `instagram/` tem a prévia do perfil (publicada em `/instagram/`): nome de usuário, bio, destaques e os 12 primeiros posts, cada um com uma imagem de projeto e uma legenda curta. As imagens dos posts, as capas de destaques e a foto de perfil estão em `instagram/posts/`, `instagram/destaques/` e `instagram/perfil/`. O kit para baixar tudo de uma vez é `instagram/kit/cerezini-instagram-kit.zip`. Os textos ficam em `instagram/js/data.js`.
